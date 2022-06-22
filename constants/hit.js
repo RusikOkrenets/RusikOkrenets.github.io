@@ -1,0 +1,55 @@
+const CATALOG=[
+    {
+        id:'hit-1',
+        name:'Косметичка - мішок на зав`язці "Big Bag" ',
+        img:'https://raw.githubusercontent.com/RusikOkrenets/glorymix-catalog-foto/3b72bc87d6dfdf57577d9b41ea583821df770254/big_bag.jpg',
+        number:'1шт',
+        price:'115.00',
+        category:'care-face',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+        
+    },
+    {
+        id:'hit-2',
+        name:'Косметичка органайзер "Shine"',
+        img:'https://raw.githubusercontent.com/RusikOkrenets/glorymix-catalog-foto/2d9edd1c1ee82a8ebe91354addce8f38bbfdddf8/shine.jpg',
+        number:'120г',
+        price:'105.00',        
+        category:'care-face',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+    }, 
+    {
+        id:'hit-3',
+        name:'Патчі гідрогелеві IMAGES Seaweed Elastic Tender',
+        img:'https://github.com/RusikOkrenets/glorymix-catalog-foto/blob/main/images.jpg?raw=true',
+        number:'1уп (60шт.)',
+        price:'105.00',
+        category:'care-face',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+    }, {
+        id:'hit-4',
+        name:'Набір кистей для макіяжу',
+        img:'https://raw.githubusercontent.com/RusikOkrenets/glorymix-catalog-foto/f1dd446a93f0343fa276b1dbe45a05a14002399c/kisti.jpg',
+        number:'1 уп.',
+        price:'155.00',
+        category:'care-face',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+    }, {
+        id:'hit-5',
+        name:'Гребінець для волосся Kommen, м`яка',
+        img:'https://raw.githubusercontent.com/RusikOkrenets/glorymix-catalog-foto/35abd26c2a297d2a66f21e57401b8a297a633bfa/unikorn.jpg',
+        number:'1шт',
+        price:'105.00',
+        category:'care-face',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+    }, {
+        id:'hit-6',
+        name:'Щітка для вмивання обличчя силіконова "Восьминіг"',
+        img:'https://github.com/RusikOkrenets/glorymix-catalog-foto/blob/main/photo_2020-08-03_13-50-05%20(2)-600x600.jpg?raw=true',
+        number:'1шт',
+        price:'50.00',
+        category:'care-cosmetic-bags',
+        description:'Тут буде опис товару, теееееееееееееееееееееекст',
+    }, 
+
+];

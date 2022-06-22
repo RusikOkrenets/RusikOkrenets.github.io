@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <link rel="shortcut icon" href="../../images/shorticon.png">
+    <title>Кошик</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>        
+        <div class="wrapper">
+            <div class="navigation">
+                <a href="../../page.html"><img src="../../images/logogrey-320x80-320x80-600x315.png"></a>
+            <ul class="nav">
+                <li><a class="pinki" href="../../html/action.html">Акція</a></li>
+                <li><a id="active" href="../../html/care.html">Догляд</a></li>
+                <li><a href="../../html/house.html">Дім</a></li>
+                <li><a href="../../html/decorations.html">Прикраси</a></li>
+                <li><a href="../../html/massagers.html">Масажери</a></li>                
+            </ul>
+
+            <div class="nav-icon">
+            <a href="Shopping.html"><img src="../../images/icon_shoppingcart2.png" alt="shop cart"></a>
+            </div>
+        </div>
+    </div>
+<h2 class="title-h2">Оформлення замовлення</h2>
+<hr>
+
+
+
+<div id="shopping"></div>
+
+<script src="../../constants/catalog.js"></script>
+<script src="../../constants/catalog-home-saving.js"></script>
+
+
+<script src="../../constants/root.js"></script>
+
+<script src="../../utils/localStorageUtil.js"></script> 
+
+<script src="../Header/Header.js"></script>
+<link rel="stylesheet" href="../Header/Header.css">
+
+<script src="../Products/Products.js"></script>
+<link rel="stylesheet" href="../Products/Products.css">
+
+<script src="Shopping.js"></script>
+<link rel="stylesheet" href="Shopping.css">   
+<div class="wrapper">
+<div class="buyer-block">
+        
+    <h3 class="buyer-h3">Покупець</h3>
+    
+     <div class="buyer-label">
+         <label class="buyer-label__label" id="buyer-name" >*</label>
+
+         <input  class="buyer-label__text" placeholder="Ім'я" maxlength="15" pattern="[a-z]{1,15}" type="text">
+     </div>
+    
+     <div class="buyer-label">
+         <label class="buyer-label__label" id="buyer-surname">*</label>
+         <input  class="buyer-label__text" placeholder="Прізвище" maxlength="15" type="text">
+     </div>
+
+     <div class="buyer-label">
+         <label class="buyer-label__label" >*</label>
+         <input  class="buyer-label__text" placeholder="Номер телефону" id="buyer-phonenumber" type="text">
+     </div>
+
+     <div class="buyer-label">
+         <label class="buyer-label__label" id="buyer-email">*</label>
+         <input  class="buyer-label__text" placeholder="Email" type="text">
+     </div>
+
+    <h3 class="buyer-h3">Спосіб оплати</h3>
+
+
+    <p class="oplata_p">
+        Замовлення, вартість якого НЕ перевищує 300 грн, відправляються лише після повної передоплати!
+    </p>
+    
+    <h4 class="oplata_h4">
+        Інструкція переводу коштів
+    </h4>
+
+    <p class="oplata_p">
+        Оплата на карту Приватбанк<br> <b>4149 6293 5371 8414 Кульчинська Ірина Миколаївна</b><br>
+        Замовлення не буде надіслано, поки гроші не надійдуть на наш розрахунковий рахунок.
+    </p>
+
+    <h3 class="buyer-h3">Спосіб доставки</h3>
+
+<div class="radio-block">        
+    <label>Нова пошта<br>
+        <input  type="radio" name="dostavka" id="nev-post">
+        <span></span>
+    </label>
+</div>
+
+<div class="radio-block">        
+    <label>Укрпошта
+        <input type="radio" name="dostavka" id="ukr-post">
+        <span></span>
+    </label>
+</div>
+    <h3 class="buyer-h3">Адреса доставки</h3>
+
+    
+
+    <div class="adress_block">
+        <label class="buyer-label__label">*</label>
+        <input class="buyer-label__text" type="text" placeholder="Місто" maxlength="10"><br>
+    </div>
+
+   <div class="adress_block">
+        <label class="buyer-label__label">*</label>
+        <input class="buyer-label__text" type="text" placeholder="Відділення" maxlength="10"><br>
+    </div>
+    <button id="my_btn" class="buyer__btn" onclick="alerted();">Оформити замовлення</button>
+
+    <div id="mypopap" class="popap">
+        <div class="popup-block">
+        <img  class="alert-foto" src="../../images/logo-foo.png">
+        <h2 class="alert-h2">Ваше замовлення зформовано!<br> Незабаром менеджер зв`яжиться з вами!</h2>
+        <br>
+        <h4 class="alert-h4">Дякуємо, що обираєте GLORYMIX💕</h4>
+        <br>
+        
+        <button class="close-alert">Закрити ❌</button></div>
+    </div>
+<script>
+let popap = document.getElementById('mypopap');
+    popapToggle = document.getElementById('my_btn');
+    popapClose = document.querySelector('.close-alert');
+
+    popapToggle.onclick = function(){
+        popap.style.display="block";
+    };
+    popapClose.onclick = function(){
+        popap.style.display="none";
+    }
+</script>
+
+</div>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/mask.js"></script>
+<br><hr>
+
+</div>
+    <footer>
+       
+        <div class="wrapper">
+               <div class="footer-block">
+                   <div class="footer-logo">
+                    <a href="../../page.html"><img class="footerlogotype" src="../../images/logo-foo.png"></a>
+                       <h3>Оптові замовлення </h3>
+                   </div>
+                   <div class="footer-input">
+                       <input type="text" placeholder="Subscribe to our Newslatter">
+                   </div>
+               </div>
+               <hr>
+               
+               <div class="footer-links">
+                <div class="footer-link"> 
+               <div class="our-soc-net">
+                <h3>Слідкуйте за нами в</h3>
+                <div class="soc-net">
+                    <a href="https://www.facebook.com/glorymix.ua/"><img  class="soc_img"src="../../images/icon_facebook.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/glorymix/"><img class="soc_img" src="../../images/icon_instagram.png" alt="instagram"></a>
+                </div>
+            </div>
+            <div class="pay-block">
+                <h3>Оплата за допомогою</h3>
+                <img src="../../images/icon-mastercard.png" alt="mastercard">
+                <img src="../../images/icon-visa.png" alt="visa">
+                <img src="../../images/icons-maestro.png" alt="maestro">
+            </div>
+            </div>    
+                   <div id="hidden" class="footer-link"> 
+                       <p class="p">Каталог</p>
+                       <a href="../../html/care.html">Догляд за собою</a>
+                       <a href="../../html/house.html">Дім</a>
+                       <a href="../../html/decorations.html">Прикраси</a>
+                       <a href="../../html/massagers.html">Масажери</a>
+                       <a href="../../html/action.html">Акція</a>
+                   </div>
+                   <div id="hidden" class="footer-link"> 
+                    <p class="p">Клієнтам</p>
+                    <a href="../../html/avtorization.html">Вхід в кабінет</a>
+                    <a href="../../html/garantia.html">Гарантія повернення</a>
+                    <a href="../../html/oplata.html">Оплата</a>
+                    <a href="../../html/dostavka.html">Доставка</a>
+                    <a href="../../html/aboutus.html">Про нас</a>
+                </div>
+                <div class="footer-link"> 
+                    <p class="p">Контакти</p>
+                    <a class="kyivstar" href="tel:+380988447375">(098) 844-73-75</a>
+                    <a class="vodafone" href="tel:+380505865562">(050) 586-55-62</a>
+                    <a class="kyivstar" href="tel:+380980711477">(098) 071-14-77</a>
+                    <p class="time" class="par">Замовлення по телефону з 09:00 до 18:00</p>
+                    <p class="place" class="par">м. Рівне, Небесно Сотні, 22</p>
+                    <p class="mail" class="par">glorymix.ltd@gmail.com</p>
+                </div>
+               </div>
+               <hr>
+               <h4 class="copyright">Copyright © 2014 - 2022, glorymix.ua</h4>
+            </div>
+       </footer>
+
+    </body>
+</html>

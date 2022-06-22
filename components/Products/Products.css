@@ -1,0 +1,58 @@
+.products-container{
+    max-width: 1200px;
+    margin: 0px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 25px;
+    text-align: center;
+}
+.products-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(255,255,255),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);;
+    
+}
+.products-element a{
+    text-decoration: none;
+}
+.products-element__name{
+    margin-bottom: auto;
+    color: #696969;
+    font-weight: bold;
+}
+.products-element__img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.products-element__price{
+    margin: 0px auto;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e01751;
+    text-align: center;
+
+}
+
+
+.b-red, .b-red:before{background:#ea6e48;background:-moz-linear-gradient(45deg,#ea6e48 0,#bc1a63 100%);background:-webkit-gradient(left bottom,right top,color-stop(0,#ea6e48),color-stop(100%,#bc1a63));background:-webkit-linear-gradient(45deg,#ea6e48 0,#bc1a63 100%);background:-o-linear-gradient(45deg,#ea6e48 0,#bc1a63 100%);background:-ms-linear-gradient(45deg,#ea6e48 0,#bc1a63 100%);background:linear-gradient(45deg,#ea6e48 0,#bc1a63 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea6e48',endColorstr='#bc1a63',GradientType=1)}
+.b-blue, .b-blue:before{background:#0576ff;background:-moz-linear-gradient(45deg,#0576ff 0,#24f8ff 100%);background:-webkit-gradient(left bottom,right top,color-stop(0,#0576ff),color-stop(100%,#24f8ff));background:-webkit-linear-gradient(45deg,#0576ff 0,#24f8ff 100%);background:-o-linear-gradient(45deg,#0576ff 0,#24f8ff 100%);background:-ms-linear-gradient(45deg,#0576ff 0,#24f8ff 100%);background:linear-gradient(45deg,#0576ff 0,#24f8ff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0576ff',endColorstr='#24f8ff',GradientType=1)}
+.button2{display:inline-block;font-size:15px; border: none; margin:10px;padding:10px;border-radius:5px;transition:all .5s;filter:hue-rotate(0);color:#FFF;text-decoration:none}
+ .rot-135:hover{filter:hue-rotate(135deg)}
+
+ .item-status{
+    text-align: left;
+    color: #696969;
+    font-family:'Montserat';
+    padding: 12px;
+ }
